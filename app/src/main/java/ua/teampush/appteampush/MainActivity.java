@@ -53,31 +53,29 @@ public class MainActivity extends ActionBarActivity
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
-        switch (position){
+        Fragment objfragment=null;
+        switch (position)
+        {
             case 0:
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, new MyRooms_Fragment()) //HERE WE WILL CALL FRAGMENTS!!!!!
-                        .commit();
+                objfragment=new MyRooms_Fragment();
                 break;
             case 1:
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, new AllRooms_Fragment()) //HERE WE WILL CALL FRAGMENTS!!!!!
-                        .commit();
+                objfragment=new AllRooms_Fragment();
                 break;
             case 2:
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, new Settings_Fragment()) //HERE WE WILL CALL FRAGMENTS!!!!!
-                        .commit();
+                objfragment=new Settings_Fragment();
                 break;
             case 3:
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, new About_Fragment()) //HERE WE WILL CALL FRAGMENTS!!!!!
-                        .commit();
+                objfragment=new About_Fragment();
                 break;
             case 4:
-                //THERE WE WILL HANDLE THE LOGOUT EVENT, WE NEED TO CREATE WINDOW "R U SURE U WANNA LOGOUT"
+                System.exit(0);
             default:
+                break;
         }
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, objfragment) //HERE WE WILL CALL FRAGMENTS!!!!!
+                .commit();
     }
 
     public void onSectionAttached(int number) {
