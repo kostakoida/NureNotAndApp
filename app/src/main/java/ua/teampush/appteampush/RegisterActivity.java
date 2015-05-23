@@ -62,7 +62,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
             public void run() {
 
                 try{
-                    URL url = new URL("http://192.168.65.151:8080/TeamPushServer/AddUser");
+                    URL url = new URL("http://31.202.23.254:8080/TeamPushServer/AddUser");
                     URLConnection connection = url.openConnection();
 
                     String inputString = string1.getText().toString()+"/"+string2.getText().toString();
