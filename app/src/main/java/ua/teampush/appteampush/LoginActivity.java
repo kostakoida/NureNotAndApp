@@ -108,7 +108,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 {
                     Log.d("Exception",e.toString());
                 }
-
             }
         }).start();
         if(v.getId() == R.id.registerText){

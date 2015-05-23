@@ -1,6 +1,8 @@
 package ua.teampush.appteampush;
 
 import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -51,9 +53,31 @@ public class MainActivity extends ActionBarActivity
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
-                .commit();
+        switch (position){
+            case 0:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new MyRooms_Fragment()) //HERE WE WILL CALL FRAGMENTS!!!!!
+                        .commit();
+                break;
+            case 1:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new AllRooms_Fragment()) //HERE WE WILL CALL FRAGMENTS!!!!!
+                        .commit();
+                break;
+            case 2:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new Settings_Fragment()) //HERE WE WILL CALL FRAGMENTS!!!!!
+                        .commit();
+                break;
+            case 3:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new About_Fragment()) //HERE WE WILL CALL FRAGMENTS!!!!!
+                        .commit();
+                break;
+            case 4:
+                //THERE WE WILL HANDLE THE LOGOUT EVENT, WE NEED TO CREATE WINDOW "R U SURE U WANNA LOGOUT"
+            default:
+        }
     }
 
     public void onSectionAttached(int number) {
@@ -67,14 +91,24 @@ public class MainActivity extends ActionBarActivity
             case 3:
                 mTitle = getString(R.string.title_section3);
                 break;
+            case 4:
+                mTitle = getString(R.string.title_section4);
+                break;
+            case 5:
+                mTitle = getString(R.string.title_section5);
+                break;
         }
     }
 
+    //HERE IS OUT ACTIONBAR!
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#009D91"));
+        actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
+
     }
 
 
@@ -130,7 +164,7 @@ public class MainActivity extends ActionBarActivity
 
         public PlaceholderFragment() {
         }
-
+        //Style in .intlate is style of fragment!!!
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {

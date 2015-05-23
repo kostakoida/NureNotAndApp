@@ -19,12 +19,22 @@
     <string name="logout">Log Out</string>
     <string name="title_activity_main">MainActivity</string>
 
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">My rooms</string>
+    <string name="title_section2">All rooms</string>
+    <string name="title_section3">Settings</string>
+    <string name="title_section4">About</string>
+    <string name="title_section5">Log out</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_example">Example action</string>
+    <string name="action_search">Search</string>
+    <color name="acbarcolor">#009D91</color>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="myrooms_fragment">MY ROOMS</string>
+    <string name="allrooms_fragment">ALL ROOMS</string>
+    <string name="settings_fragment">SETTINGS</string>
+    <string name="about_fragment">ABOUT</string>
+
 </resources>

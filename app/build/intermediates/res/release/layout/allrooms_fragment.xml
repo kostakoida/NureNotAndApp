@@ -1,0 +1,11 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="ua.teampush.appteampush.AllRooms_Fragment"
+    android:background="#D8F8F8">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+        android:text="@string/allrooms_fragment" />
+
+</FrameLayout>
+<!-- From: file:/E:/AndroidStudioProjects/TeamPushRepo/TeamPushAndroid/app/src/main/res/layout/allrooms_fragment.xml -->
